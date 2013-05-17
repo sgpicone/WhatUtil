@@ -49,7 +49,7 @@ namespace WhatDownload
         /// <param name="pass">The password to connect with</param>
         public FTP(string url, string user, string pass)
         {
-            baseUrl = url.EndsWith("/") ? url + "{0}" : url + "/{0}"; //I love ternary operators!
+            baseUrl = url.EndsWith("}") ? url : url.EndsWith("/") ? url + "{0}" : url + "/{0}"; //I love ternary operators!
             Console.WriteLine(baseUrl);
             userName = user;
             password = pass;

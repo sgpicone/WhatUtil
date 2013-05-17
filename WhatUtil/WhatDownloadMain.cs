@@ -12,7 +12,7 @@ namespace WhatDownload
 {
     class WhatDownloadMain
     {
-        static string baseurl = "ftp://gumdrop.whatbox.ca/";
+        static string baseurl = "ftp://gumdrop.whatbox.ca/{0}";
         static void Main(string[] args)
         {
             CLI cli = new CLI(baseurl, "foojewel", "jewfoo");
@@ -61,8 +61,12 @@ namespace WhatDownload
             //reader.Close();
             //response.Close();
             //Console.ReadKey();
-
-            Thread.Sleep(500);
+            Console.Write("Shutting down in 3. . .");
+            Thread.Sleep(1000);
+            Console.Write("\rShutting down in 2. . .");
+            Thread.Sleep(1000);
+            Console.Write("\rShutting down in 1. . .");
+            Thread.Sleep(1000);
         }
     }
 }
