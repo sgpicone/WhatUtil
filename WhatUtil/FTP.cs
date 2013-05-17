@@ -485,7 +485,9 @@ namespace WhatDownload
         public string pwdSimple(string dir)
         {
             string result = "";
-            foreach (string s in lsSimple(dir))
+            List<string> sorted = lsSimple(dir).ToList<string>();
+            sorted.Sort();
+            foreach(string s in sorted)
             {
                 result += s;
                 result += "\n";

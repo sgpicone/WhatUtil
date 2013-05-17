@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using System.Globalization;
+using System.Threading;
 
 namespace WhatDownload
 {
@@ -59,7 +60,9 @@ namespace WhatDownload
 
             //reader.Close();
             //response.Close();
-            Console.ReadKey();
+            //Console.ReadKey();
+
+            Thread.Sleep(500);
         }
     }
 }

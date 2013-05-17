@@ -48,6 +48,11 @@ namespace WhatDownload
         public void showCommands()
         {
             commands.showAll();
-        }            
+        }
+
+        public void showHelp()
+        {
+            commands.showDefinitions();
+        }
     }
 }

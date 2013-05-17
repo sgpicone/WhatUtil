@@ -32,8 +32,8 @@ namespace WhatDownload
 
         public void printWelcome()
         {
-            Console.WriteLine("WhatUtil - The Whatbox Downloader Utility");
-            Console.WriteLine("Not affiliated with Whatbox.");
+            Console.WriteLine("\t\tWhatUtil - The Whatbox Downloader Utility\n");
+            Console.WriteLine("\t\t\tNot affiliated with Whatbox.\n");
             Console.WriteLine("Your commands are:");
             parser.showCommands();
         }
@@ -76,17 +76,33 @@ namespace WhatDownload
             }
             else
             {
-                //Console.WriteLine(c.getArgs()[0]);
-                ftp.pwdSimple(c.getArgs()[0]);
+                Console.WriteLine(c.getArgs()[0]);
+                Console.WriteLine(
+                    ftp.pwdSimple(c.getArgs()[0])
+                    );
             }
         }
 
         private void lsd(Command c)
         {
+            if (c.getArgs() == null)
+            {
+                Console.WriteLine("Need an argument.");
+            }
+            else
+            {
+                Console.WriteLine(c.getArgs()[0]);
+                Console.WriteLine(
+                    ftp.pwdDetailed(c.getArgs()[0])
+                    );
+            }
         }
 
         private void help()
         {
+            Console.WriteLine("Your commands are:\n");
+            parser.showCommands();
+            parser.showHelp();
         }
 
         private bool quit(Command c)
