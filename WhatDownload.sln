@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatDownload", "ConsoleApplication1\WhatDownload.csproj", "{3C8D0A5E-8813-4AA5-8E60-7AF4AF0A7DE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatDownload", "WhatUtil\WhatDownload.csproj", "{3C8D0A5E-8813-4AA5-8E60-7AF4AF0A7DE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
