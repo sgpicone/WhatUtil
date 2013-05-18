@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WhatDownload
 {
+    /// <summary>
+    /// CLI for the WhatUtil
+    /// </summary>
     class CLI
     {
         private CommandParser parser;
