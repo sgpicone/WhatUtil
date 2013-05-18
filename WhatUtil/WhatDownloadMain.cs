@@ -61,12 +61,19 @@ namespace WhatDownload
             //reader.Close();
             //response.Close();
             //Console.ReadKey();
-            Console.Write("Shutting down in 3. . .");
-            Thread.Sleep(1000);
-            Console.Write("\rShutting down in 2. . .");
-            Thread.Sleep(1000);
-            Console.Write("\rShutting down in 1. . .");
-            Thread.Sleep(1000);
+            int i = 3;
+            while (i > 0)
+            {
+                Console.Write(String.Format("\rShutting down in {0}. . .", i));
+                Thread.Sleep(500);
+                i--;
+            }
+            //Console.Write("Shutting down in 3. . .");
+            //Thread.Sleep(500);
+            //Console.Write("\rShutting down in 2. . .");
+            //Thread.Sleep(500);
+            //Console.Write("\rShutting down in 1. . .");
+            //Thread.Sleep(500);
         }
     }
 }

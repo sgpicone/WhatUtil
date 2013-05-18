@@ -9,7 +9,7 @@ namespace WhatDownload
     class CommandWords
     {
         private static string[] validWords = {
-            "autodl", "ls", "lsd", "dl", "ul", "rm", "mkdir", "mv", "help", "quit"
+            "autodl", "ls", "lsd", "dl", "ul", "rm", "mkdir", "mv", "help", "cls", "quit"
                                             };
 
         private static string[] definitions = {
@@ -22,6 +22,7 @@ namespace WhatDownload
             "Makes a specified remote directory",
             "Renames a specified remote file to another remote file",
             "Prints help.",
+            "Clears the screen.",
             "Quits WhatUtil"
                                               };
 

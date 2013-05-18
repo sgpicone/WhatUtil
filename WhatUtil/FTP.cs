@@ -50,7 +50,7 @@ namespace WhatDownload
         public FTP(string url, string user, string pass)
         {
             baseUrl = url.EndsWith("}") ? url : url.EndsWith("/") ? url + "{0}" : url + "/{0}"; //I love ternary operators!
-            Console.WriteLine(baseUrl);
+            //Console.WriteLine(baseUrl);
             userName = user;
             password = pass;
         }
@@ -152,7 +152,7 @@ namespace WhatDownload
             }
         }
 
-        public void upload(string remoteFile, string localFile)
+        public void upload(string localFile, string remoteFile)
         {
             FileStream localFileStream = null;
             try

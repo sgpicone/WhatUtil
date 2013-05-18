@@ -61,6 +61,7 @@ namespace WhatDownload
                 case "mkdir": mkdir(command); break;
                 case "mv": mv(command); break;
                 case "autodl": autodl(command); break;
+                case "cls": cls(); break;
                 default:
                     Console.WriteLine("Do what now?");
                     break;
@@ -70,9 +71,9 @@ namespace WhatDownload
 
         private void ls(Command c)
         {
-            if (c.getArgs() == null)
+            if (c.getArgs() == null || c.getArgs().Length != 1)
             {
-                Console.WriteLine("Need an argument.");
+                Console.WriteLine("Usage: ls <directory path>");
             }
             else
             {
@@ -85,9 +86,9 @@ namespace WhatDownload
 
         private void lsd(Command c)
         {
-            if (c.getArgs() == null)
+            if (c.getArgs() == null || c.getArgs().Length != 1)
             {
-                Console.WriteLine("Need an argument.");
+                Console.WriteLine("Usage: lsd <directory path>");
             }
             else
             {
@@ -117,26 +118,73 @@ namespace WhatDownload
 
         private void dl(Command c)
         {
+            if (c.getArgs() == null || c.getArgs().Length != 2)
+            {
+                Console.WriteLine("Usage: dl <remote file> <local file>");
+            }
+            else
+            {
+                Console.WriteLine("I'd download that file if I was implemented yet.");
+            }
+
         }
 
         private void ul(Command c)
         {
+            if (c.getArgs() == null || c.getArgs().Length != 2)
+            {
+                Console.WriteLine("Usage: ul <local file> <remote file>");
+            }
+            else
+            {
+                Console.WriteLine("I'd upload that file if I was implemented yet.");
+            }
         }
 
         private void rm(Command c)
         {
+            if(c.getArgs() == null || c.getArgs().Length != 1)
+            {
+                Console.WriteLine("Usage: rm <remote file>");
+            }
+            else
+            {
+                Console.WriteLine("I'd remove that file if I was implemented yet.");
+            }
         }
 
         private void mkdir(Command c)
         {
+            if(c.getArgs() == null || c.getArgs().Length != 1)
+            {
+                Console.WriteLine("Usage: mkdir <remote directory>");
+            }
+            else
+            {
+                Console.WriteLine("I'd make that directory if I was implemented yet.");
+            }
         }
 
         private void mv(Command c)
         {
+            if (c.getArgs() == null || c.getArgs().Length != 2)
+            {
+                Console.WriteLine("Usage: mv <old filename> <new filename>");
+            }
+            else
+            {
+                Console.WriteLine("I'd rename that file if I was implemented yet.");
+            }
         }
 
         private void autodl(Command c)
         {
+            Console.WriteLine("Oh God, that's not even close to done yet.");
+        }
+
+        private void cls()
+        {
+            Console.Clear();
         }
     }
 }
