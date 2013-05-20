@@ -27,7 +27,7 @@ namespace WhatDownload
     //response.Close();
     //Console.ReadKey();
 
-    class FTP
+    public partial class FTP
     {
         private string          baseUrl             = null;
         private string          userName            = null;

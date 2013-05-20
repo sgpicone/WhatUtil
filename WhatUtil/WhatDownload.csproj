@@ -61,6 +61,7 @@
     <Compile Include="CommandParser.cs" />
     <Compile Include="CommandWords.cs" />
     <Compile Include="FTP.cs" />
+    <Compile Include="FTPDownloadMaster.cs" />
     <Compile Include="FTPFile.cs" />
     <Compile Include="WhatDownloadMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -35,7 +35,11 @@ namespace WhatDownload
             List<string> wordsLine = input.Split(' ').ToList<String>() as List<string>;
             command = wordsLine[0];
             if (wordsLine.Count > 1)
+            {
                 args = wordsLine.Skip(1).ToArray<string>();
+                for(int i = 0; i < args.Length; i++)
+                    args[i] = args[i].Replace('_', ' ');
+            }
             else
                 args = null;
 

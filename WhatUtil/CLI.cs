@@ -127,7 +127,11 @@ namespace WhatDownload
             }
             else
             {
-                Console.WriteLine("I'd download that file if I was implemented yet.");
+                string remote = c.getArgs()[0].Replace(" ", "%20");
+                string local = c.getArgs()[1];
+                Console.WriteLine("Downloading " + remote + " to " + local); 
+                ftp.download(remote, local);
+                //Console.WriteLine("I'd download that file if I was implemented yet.");
             }
 
         }
