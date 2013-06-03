@@ -29,6 +29,35 @@ namespace WhatDownload
 
     public partial class FTP
     {
+        public ICredentials creds { get; set; }
+        public Uri connectUrl { get; private set; }
+        FTPStatus status;
+
+        public FTPStatus Status
+        {
+            get
+            {
+                return status;
+            }
+
+            private set
+            {
+                if (status != value)
+                {
+                    status = value;
+                    this.OnStatusChanged(EventArgs.Empty);
+                }
+            }
+        }
+
+        public event EventHandler<ErrorEventHandler> ErrorOccurred;
+        public event EventHandler StatusChanged;
+        public event EventHandler<FileDownloadCompletedEventArgs> FileDownloadCompleted;
+        public event EventHandler<NewMessageEventArg> NewMessageArrived;
+
+
+
+
         private string          baseUrl             = null;
         private string          userName            = null;
         private string          password            = null;
@@ -50,7 +79,7 @@ namespace WhatDownload
         public FTP(string url, string user, string pass)
         {
             baseUrl = url.EndsWith("}") ? url : url.EndsWith("/") ? url + "{0}" : url + "/{0}"; //I love ternary operators!
-            //Console.WriteLine(baseUrl);
+            this.connectUrl = new Uri(baseUrl);
             userName = user;
             password = pass;
         }

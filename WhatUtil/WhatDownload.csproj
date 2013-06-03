@@ -60,9 +60,13 @@
     <Compile Include="CLI.cs" />
     <Compile Include="CommandParser.cs" />
     <Compile Include="CommandWords.cs" />
+    <Compile Include="ErrorEventArgs.cs" />
+    <Compile Include="FileDownloadCompletedEventArgs.cs" />
     <Compile Include="FTP.cs" />
     <Compile Include="FTPDownloadMaster.cs" />
     <Compile Include="FTPFile.cs" />
+    <Compile Include="FTPStatus.cs" />
+    <Compile Include="NewMessageEventArg.cs" />
     <Compile Include="WhatDownloadMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
